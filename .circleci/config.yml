@@ -30,12 +30,16 @@ jobs:
           name: Install Ansible
           command: |
             # Install Ansible
-            apk add --update ansible 
+            apk add --update ansible
       - run:
-          name: Run Playbook and Configure server
-          command: |
-            # Your command
-            ansible-playbook -i inventory.txt main.yml
+          command: ls -la
+      - run:
+          command: cat inventory.txt
+      # - run:
+      #     name: Run Playbook and Configure server
+      #     command: |
+      #       # Your command
+      #       ansible-playbook -i inventory.txt main.yml
 
 # Sequential workflow
 workflows:
