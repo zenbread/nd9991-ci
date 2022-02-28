@@ -35,11 +35,11 @@ jobs:
           command: ls -la
       - run:
           command: cat inventory.txt
-      # - run:
-      #     name: Run Playbook and Configure server
-      #     command: |
-      #       # Your command
-      #       ansible-playbook -i inventory.txt main.yml
+      - run:
+          name: Run Playbook and Configure server
+          command: |
+            # Your command
+            ansible-playbook -i inventory.txt main.yml
 
 # Sequential workflow
 workflows:
